@@ -1,6 +1,6 @@
 # Contact-App-iOS
 Example beautiful contact app 
-Yelp--TanLT
+
 Required
 
 [ ] Create contact screen
