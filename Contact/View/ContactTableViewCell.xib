@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCell" rowHeight="116" id="KGk-i7-Jjw" customClass="ContactTableViewCell" customModule="Contact" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="462" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="462" height="109.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ivf-ir-SPc" userLabel="Avatar">
+                        <rect key="frame" x="20" y="10" width="90" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Ivf-ir-SPc" secondAttribute="height" multiplier="1:1" id="7Ad-lP-Pwx"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gi4-GM-F8g" userLabel="ViewJob">
+                        <rect key="frame" x="117" y="55" width="245" height="47"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Student" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gf-rh-sqO">
+                                <rect key="frame" x="0.0" y="0.0" width="255" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2Gf-rh-sqO" secondAttribute="bottom" id="7OC-Pl-8UB"/>
+                            <constraint firstItem="2Gf-rh-sqO" firstAttribute="leading" secondItem="gi4-GM-F8g" secondAttribute="leading" id="Dsw-lC-Ilp"/>
+                            <constraint firstAttribute="trailing" secondItem="2Gf-rh-sqO" secondAttribute="trailing" id="JqK-os-U9A"/>
+                            <constraint firstItem="2Gf-rh-sqO" firstAttribute="top" secondItem="gi4-GM-F8g" secondAttribute="top" id="Zeq-rA-fTA"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zi3-NU-Lcl" userLabel="ViewName">
+                        <rect key="frame" x="118" y="8" width="244" height="18"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Le Thanh Tan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeV-84-CgJ" userLabel="Name">
+                                <rect key="frame" x="0.0" y="0.0" width="255" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UeV-84-CgJ" secondAttribute="trailing" id="ARY-Fb-pNm"/>
+                            <constraint firstItem="UeV-84-CgJ" firstAttribute="top" secondItem="Zi3-NU-Lcl" secondAttribute="top" id="Qdb-XC-KrF"/>
+                            <constraint firstAttribute="bottom" secondItem="UeV-84-CgJ" secondAttribute="bottom" id="hPY-0l-TIM"/>
+                            <constraint firstItem="UeV-84-CgJ" firstAttribute="leading" secondItem="Zi3-NU-Lcl" secondAttribute="leading" id="xCP-47-uTH"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfx-NI-6yd">
+                        <rect key="frame" x="367" y="10" width="90" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="jfx-NI-6yd" secondAttribute="height" multiplier="1:1" id="FDD-PV-Eoi"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                        <state key="normal" image="call"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="gi4-GM-F8g" secondAttribute="bottom" constant="8" id="2PP-wD-NWB"/>
+                    <constraint firstAttribute="trailing" secondItem="gi4-GM-F8g" secondAttribute="trailing" constant="60" id="8is-HD-lr1"/>
+                    <constraint firstItem="Ivf-ir-SPc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="CQq-XJ-BBX"/>
+                    <constraint firstAttribute="trailing" secondItem="Zi3-NU-Lcl" secondAttribute="trailing" constant="60" id="Cau-TF-Otp"/>
+                    <constraint firstItem="gi4-GM-F8g" firstAttribute="leading" secondItem="Zi3-NU-Lcl" secondAttribute="leading" id="E0F-VI-rtO"/>
+                    <constraint firstItem="jfx-NI-6yd" firstAttribute="bottom" secondItem="Ivf-ir-SPc" secondAttribute="bottom" id="IWJ-9i-GrS"/>
+                    <constraint firstItem="gi4-GM-F8g" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.5" constant="-8" id="Jfj-wq-l2Z"/>
+                    <constraint firstItem="jfx-NI-6yd" firstAttribute="leading" secondItem="Zi3-NU-Lcl" secondAttribute="trailing" constant="5" id="R9T-wv-YzA"/>
+                    <constraint firstAttribute="bottom" secondItem="Ivf-ir-SPc" secondAttribute="bottom" constant="10" id="UHu-9n-6OR"/>
+                    <constraint firstItem="jfx-NI-6yd" firstAttribute="leading" secondItem="gi4-GM-F8g" secondAttribute="trailing" constant="5" id="WIi-mY-5pe"/>
+                    <constraint firstItem="jfx-NI-6yd" firstAttribute="top" secondItem="Ivf-ir-SPc" secondAttribute="top" id="oYo-E7-IcL"/>
+                    <constraint firstItem="Ivf-ir-SPc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="uhO-Ua-5Gs"/>
+                    <constraint firstItem="Zi3-NU-Lcl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="xWe-Rb-sv2"/>
+                    <constraint firstAttribute="trailing" secondItem="jfx-NI-6yd" secondAttribute="trailing" constant="5" id="yFS-4t-8zR"/>
+                    <constraint firstItem="Zi3-NU-Lcl" firstAttribute="leading" secondItem="Ivf-ir-SPc" secondAttribute="trailing" constant="7.5" id="zcC-OF-5ZH"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Cau-TF-Otp"/>
+                        <exclude reference="8is-HD-lr1"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImage" destination="Ivf-ir-SPc" id="3Te-f1-E3a"/>
+                <outlet property="callButton" destination="jfx-NI-6yd" id="sAI-a0-dHM"/>
+                <outlet property="jobLabel" destination="2Gf-rh-sqO" id="qwn-MI-J6I"/>
+                <outlet property="nameLabel" destination="UeV-84-CgJ" id="Hf4-2b-pMS"/>
+                <outlet property="view" destination="H2p-sc-9uM" id="nM5-tb-a79"/>
+                <outlet property="viewName" destination="Zi3-NU-Lcl" id="2EE-Us-GYY"/>
+            </connections>
+            <point key="canvasLocation" x="487" y="464"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="call" width="42" height="42"/>
+    </resources>
+</document>
