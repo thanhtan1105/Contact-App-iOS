@@ -25,26 +25,34 @@ class ContactsViewController: UIViewController {
 		}
 	}
 	
-	var carrierName: String = "" {
+	var carrierName: CarrierName = CarrierName.Unidentified {
 		didSet {
 			dispatch_async(dispatch_get_main_queue(), {
-				self.carrierNameLabel.text = self.carrierName
+				self.carrierNameLabel.text = "Nhà mạng: \(self.carrierName)"
 				self.nameLabel.text = deviceName
 			})
+		}
+	}
+	
+	var profileImage: UIImage = UIImage() {
+		didSet {
+			dispatch_async(dispatch_get_main_queue()) { 
+				self.avatarImage.image = self.profileImage
+			}
 		}
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		contactHelper = ContactHelper(contactViewController: self)
-		
 		tableView.tableHeaderView = profileView
-		
 	}
 	
 	override func viewWillAppear(animated: Bool) {		
 		contactHelper.importContactIfNeeded()
-		carrierName = contactHelper.networkInfo()
+		carrierName = contactHelper.getOwnerCarrierName()
+		profileImage = contactHelper.getOwnerProfileImage()
+		
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -72,7 +80,7 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
 			cell = NSBundle.mainBundle().loadNibNamed("ContactTableViewCell", owner: self, options: nil)[0] as! ContactTableViewCell
 		}
 		cell.configurate(contactsDic[alphabetArr[indexPath.section]]![indexPath.row])
-		
+		cell.delegate = self
 		return cell
 	}
 	
@@ -81,7 +89,10 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
 			return contact.count
 		}
 		return 0
-		
+	}
+	
+	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		tableView.deselectRowAtIndexPath(indexPath, animated: true)
 	}
 	
 	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -96,13 +107,59 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
 		if contactsDic[alphabetArr[section]] == nil {
 			return ""
 		}
-		
 		return alphabetArr[section]
+	}
+	
+	func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
+		return UILocalizedIndexedCollation.currentCollation().sectionTitles
+	}
+	
+	func tableView(tableView: UITableView,
+	               sectionForSectionIndexTitle title: String,
+								 atIndex index: Int) -> Int {
+		return UILocalizedIndexedCollation.currentCollation().sectionForSectionIndexTitleAtIndex(index)
 	}
 }
 
-// MARK: - Private Method
-extension ContactsViewController {
+// MARK: -  ContactTableViewCellDelegate Method
+extension ContactsViewController: ContactTableViewCellDelegate {
+	func contactTableViewCell(contactTableViewCell: ContactTableViewCell, didTapCallAction listPhoneNumber: [String], listCarrierName: [CarrierName]) {
+		if listPhoneNumber.count == 1 {
+			// real
+//			if let url = NSURL(string: "tel://\(listPhoneNumber.first!)") {
+//				UIApplication.sharedApplication().openURL(url)
+//			}
+
+			// test
+			let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+			let fastCallingVC = mainStoryboard.instantiateViewControllerWithIdentifier("FastCallingViewController") as! FastCallingViewController
+			fastCallingVC.phoneNumberArr = listPhoneNumber
+			fastCallingVC.ownerCarrierName = carrierName
+			fastCallingVC.carrierNameArr = listCarrierName
+			
+			self.view.alpha = 0.6
+			self.view.backgroundColor = UIColor.blackColor()
+			
+			self.navigationController?.presentViewController(fastCallingVC, animated: true, completion: {
+				fastCallingVC.contactViewController = self
+			})
+			
+		} else {
+			let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+			let fastCallingVC = mainStoryboard.instantiateViewControllerWithIdentifier("FastCallingViewController") as! FastCallingViewController
+			fastCallingVC.phoneNumberArr = listPhoneNumber
+			fastCallingVC.ownerCarrierName = carrierName
+			fastCallingVC.carrierNameArr = listCarrierName
+			
+			self.view.alpha = 0.6
+			self.view.backgroundColor = UIColor.blackColor()
+			
+			self.navigationController?.presentViewController(fastCallingVC, animated: true, completion: {
+				fastCallingVC.contactViewController = self
+			})
+		}
+	}
+	
 	
 }
 

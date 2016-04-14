@@ -8,11 +8,23 @@
 
 import UIKit
 
+
+enum CarrierName {
+	case Mobifone
+	case Viettel
+	case Vinaphone
+	case Sfone
+	case Vietnamobile
+	case Beeline
+	case Unidentified
+}
+
 protocol ContactProtocol {
 	var givenName: String? { get set }
 	var middleName: String? { get set }
 	var familyName: String? { get set }
 	var phoneNumbers: [String]? { get set }
+	var carrierName: [CarrierName]? { get set }
 	var emailAddresses: [String]? { get set}
 	var profileImage: UIImage? { get set }
 	var thumbnailImage: UIImage? { get set }
@@ -26,6 +38,7 @@ class ContactModel: ContactProtocol {
 	var middleName: String?
 	var familyName: String?
 	var phoneNumbers: [String]?
+	var carrierName: [CarrierName]?
 	var emailAddresses: [String]?
 	var profileImage: UIImage?
 	var thumbnailImage: UIImage?

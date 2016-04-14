@@ -23,21 +23,43 @@ class ContactHelper {
 		contactVC = contactViewController
 	}
 	
-	
-	
 	// MARK: - Public Method
-	func networkInfo() -> String {
+	func getOwnerCarrierName() -> CarrierName {
 		let networkInfo = CTTelephonyNetworkInfo()
 		let carrier = networkInfo.subscriberCellularProvider
 		if let carrierName = carrier?.carrierName {
-			print(carrierName)
-			return carrierName
+			var carrier = CarrierName.Unidentified
+			switch carrierName {
+			case "Mobifone":
+				carrier = CarrierName.Mobifone
+			case "Vinaphone":
+				carrier = CarrierName.Vinaphone
+			case "Viettel":
+				carrier = CarrierName.Viettel
+			case "Sfone":
+				carrier = CarrierName.Sfone
+			case "Vietnamobile":
+				carrier = CarrierName.Vietnamobile
+			case "Beeline":
+				carrier = CarrierName.Beeline
+			default:
+				carrier = CarrierName.Unidentified
+			}
+			return carrier
 		}
-		return ""
+		return CarrierName.Unidentified
 	}
 	
+	func getOwnerProfileImage() -> UIImage {
+		let image = UIImage(named: "profile_image")
+		if image == nil {
+			return UIImage(named: "avatar")!
+		}
+		return image!
+	}
+	
+	
 	func importContactIfNeeded() {
-		networkInfo()
 		if validContacts.count > 0 {
 			return
 		}
@@ -57,8 +79,9 @@ class ContactHelper {
 						CNContactSocialProfilesKey,
 						CNSocialProfileURLStringKey,
 						CNContactJobTitleKey, // done
-						CNContactBirthdayKey,
+						CNContactBirthdayKey, // done
 						CNContactOrganizationNameKey // done
+						
 					]
 					
 					let containerId = self.contactStore.defaultContainerIdentifier()
@@ -77,10 +100,14 @@ class ContactHelper {
 	private func importContact() {
 		// Loop through contatcs
 		for contact in validContacts {
+			var carrierName: [CarrierName] = []
 			var phoneNumbers: [String] = []
 			for phoneNumber in contact.phoneNumbers {
 				let value = phoneNumber.value as! CNPhoneNumber
 				phoneNumbers.append(value.stringValue)
+				
+				let carrier = defineCarrierFromPhoneNumber(value.stringValue)
+				carrierName.append(carrier)
 			}
 			
 			var emailAddresses: [String] = []
@@ -101,6 +128,7 @@ class ContactHelper {
 				tem.birthday = contact.birthday
 				tem.jobName = contact.jobTitle
 				tem.orgranizationName = contact.organizationName
+				tem.carrierName = carrierName
 			})
 			
 			let name = "\(contact.givenName) \(contact.familyName) \(contact.middleName) \(contact.organizationName)".stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
@@ -120,9 +148,44 @@ class ContactHelper {
 		if contactsDic[firstString] == nil {
 			contactsDic[firstString] = []
 		}
-		
 		var contactArr = contactsDic[firstString]
 		contactArr?.append(contactModel)
 		contactsDic[firstString] = contactArr
+	}
+	
+	private func defineCarrierFromPhoneNumber(phoneNumber: String) -> CarrierName {
+		print(phoneNumber)
+		let tmp = phoneNumber.stringByReplacingOccurrencesOfString(" ", withString: "")
+		// we will update more
+		let newPhoneNumber = tmp.stringByReplacingOccurrencesOfString("+84", withString: "0")
+		var subPhone = newPhoneNumber
+		if newPhoneNumber.characters.count > 6 {
+			subPhone = (newPhoneNumber as NSString).substringToIndex(6)
+		}
+		
+		for prefixNumber in prefixCarrierNumber {
+			if subPhone.rangeOfString(prefixNumber) != nil {
+				print(prefixNumber)
+				var carrierName = CarrierName.Unidentified
+				switch prefixCarrierName[prefixNumber]! {
+				case "Mobifone":
+					carrierName = CarrierName.Mobifone
+				case "Vinaphone":
+					carrierName = CarrierName.Vinaphone
+				case "Viettel":
+					carrierName = CarrierName.Viettel
+				case "Sfone":
+					carrierName = CarrierName.Sfone
+				case "Vietnamobile":
+					carrierName = CarrierName.Vietnamobile
+				case "Beeline":
+					carrierName = CarrierName.Beeline
+				default:
+					carrierName = CarrierName.Unidentified
+				}
+				return carrierName
+			}
+		}		
+		return CarrierName.Unidentified
 	}
 }

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ContactTableViewCellDelegate: class {
+	func contactTableViewCell(contactTableViewCell: ContactTableViewCell, didTapCallAction listPhoneNumber: [String], listCarrierName: [CarrierName])
+}
+
 class ContactTableViewCell: UITableViewCell {
 
 	@IBOutlet weak var avatarImage: UIImageView!
@@ -17,13 +21,16 @@ class ContactTableViewCell: UITableViewCell {
 	@IBOutlet weak var view: UIView!
 	@IBOutlet weak var callButton: UIButton!
 	
+	var contactModel : ContactModel!
+	weak var delegate: ContactTableViewCellDelegate!
+	
 	// layout contrainst
 	var fullContraintViewName: NSLayoutConstraint!
 	var shortContraintViewName: NSLayoutConstraint!
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		avatarImage.layer.cornerRadius = 25
+		avatarImage.layer.cornerRadius = 22
 		avatarImage.clipsToBounds = true
 		
 		fullContraintViewName = NSLayoutConstraint(item: viewName,
@@ -51,6 +58,8 @@ class ContactTableViewCell: UITableViewCell {
 	}
 	
 	func configurate(contact: ContactModel) {
+		contactModel = contact
+		callButton.hidden = contactModel.phoneNumbers?.count == 0 ? true : false
 		avatarImage.image = contact.profileImage
 		nameLabel.text =
 			"\(contact.givenName!) \(contact.familyName!)".stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
@@ -68,4 +77,9 @@ class ContactTableViewCell: UITableViewCell {
 		
 		viewName.layoutIfNeeded()
 	}
+	
+	@IBAction func onCallTouchUpInside(sender: UIButton) {
+		delegate.contactTableViewCell(self, didTapCallAction: contactModel.phoneNumbers!, listCarrierName: contactModel.carrierName!)
+	}
+	
 }

@@ -21,8 +21,8 @@
                             <constraint firstAttribute="width" secondItem="Ivf-ir-SPc" secondAttribute="height" multiplier="1:1" id="7Ad-lP-Pwx"/>
                         </constraints>
                     </imageView>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gi4-GM-F8g" userLabel="ViewJob">
-                        <rect key="frame" x="117" y="55" width="245" height="47"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gi4-GM-F8g" userLabel="ViewJob">
+                        <rect key="frame" x="118" y="55" width="249" height="47"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Student" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gf-rh-sqO">
                                 <rect key="frame" x="0.0" y="0.0" width="255" height="47"/>
@@ -40,12 +40,12 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zi3-NU-Lcl" userLabel="ViewName">
-                        <rect key="frame" x="118" y="8" width="244" height="18"/>
+                        <rect key="frame" x="118" y="8" width="249" height="18"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Le Thanh Tan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeV-84-CgJ" userLabel="Name">
                                 <rect key="frame" x="0.0" y="0.0" width="255" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -58,12 +58,15 @@
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfx-NI-6yd">
-                        <rect key="frame" x="367" y="10" width="90" height="90"/>
+                        <rect key="frame" x="372" y="15" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="jfx-NI-6yd" secondAttribute="height" multiplier="1:1" id="FDD-PV-Eoi"/>
                         </constraints>
                         <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                         <state key="normal" image="call"/>
+                        <connections>
+                            <action selector="onCallTouchUpInside:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jj8-0C-ACq"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -72,15 +75,15 @@
                     <constraint firstItem="Ivf-ir-SPc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="CQq-XJ-BBX"/>
                     <constraint firstAttribute="trailing" secondItem="Zi3-NU-Lcl" secondAttribute="trailing" constant="60" id="Cau-TF-Otp"/>
                     <constraint firstItem="gi4-GM-F8g" firstAttribute="leading" secondItem="Zi3-NU-Lcl" secondAttribute="leading" id="E0F-VI-rtO"/>
-                    <constraint firstItem="jfx-NI-6yd" firstAttribute="bottom" secondItem="Ivf-ir-SPc" secondAttribute="bottom" id="IWJ-9i-GrS"/>
+                    <constraint firstItem="jfx-NI-6yd" firstAttribute="bottom" secondItem="Ivf-ir-SPc" secondAttribute="bottom" constant="-5" id="IWJ-9i-GrS"/>
                     <constraint firstItem="gi4-GM-F8g" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.5" constant="-8" id="Jfj-wq-l2Z"/>
                     <constraint firstItem="jfx-NI-6yd" firstAttribute="leading" secondItem="Zi3-NU-Lcl" secondAttribute="trailing" constant="5" id="R9T-wv-YzA"/>
                     <constraint firstAttribute="bottom" secondItem="Ivf-ir-SPc" secondAttribute="bottom" constant="10" id="UHu-9n-6OR"/>
                     <constraint firstItem="jfx-NI-6yd" firstAttribute="leading" secondItem="gi4-GM-F8g" secondAttribute="trailing" constant="5" id="WIi-mY-5pe"/>
-                    <constraint firstItem="jfx-NI-6yd" firstAttribute="top" secondItem="Ivf-ir-SPc" secondAttribute="top" id="oYo-E7-IcL"/>
+                    <constraint firstItem="jfx-NI-6yd" firstAttribute="top" secondItem="Ivf-ir-SPc" secondAttribute="top" constant="5" id="oYo-E7-IcL"/>
                     <constraint firstItem="Ivf-ir-SPc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="uhO-Ua-5Gs"/>
                     <constraint firstItem="Zi3-NU-Lcl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="xWe-Rb-sv2"/>
-                    <constraint firstAttribute="trailing" secondItem="jfx-NI-6yd" secondAttribute="trailing" constant="5" id="yFS-4t-8zR"/>
+                    <constraint firstAttribute="trailing" secondItem="jfx-NI-6yd" secondAttribute="trailing" constant="10" id="yFS-4t-8zR"/>
                     <constraint firstItem="Zi3-NU-Lcl" firstAttribute="leading" secondItem="Ivf-ir-SPc" secondAttribute="trailing" constant="7.5" id="zcC-OF-5ZH"/>
                 </constraints>
                 <variation key="default">
@@ -102,6 +105,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="call" width="42" height="42"/>
+        <image name="call" width="64" height="64"/>
     </resources>
 </document>
