@@ -49,6 +49,9 @@ class ContactTableViewCell: UITableViewCell {
 		                                            multiplier: 0.5,
 		                                            constant: -8)
 		
+		callButton.contentMode = UIViewContentMode.ScaleAspectFill
+		
+		
 	}
 
 	override func setSelected(selected: Bool, animated: Bool) {

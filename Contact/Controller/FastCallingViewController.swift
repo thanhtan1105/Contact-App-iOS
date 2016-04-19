@@ -26,6 +26,14 @@ class FastCallingViewController: UIViewController, UIViewControllerTransitioning
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
+		let singleTap = UITapGestureRecognizer(target: self, action: #selector(handleSingleTap))
+		self.view.addGestureRecognizer(singleTap)
+	}
+	
+	func handleSingleTap() {
+		self.contactViewController.view.alpha = 1.0
+		self.contactViewController.view.backgroundColor = UIColor.whiteColor()
+		self.dismissViewControllerAnimated(true, completion: nil)
 	}
 
 	override func didReceiveMemoryWarning() {

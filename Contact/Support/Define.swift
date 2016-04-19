@@ -11,12 +11,13 @@ import UIKit
 
 let deviceName = UIDevice.currentDevice().name
 
-let alphabetArr = ["A", "B", "C", "D", "E",
-                   "F", "G", "H", "I", "J",
-                   "K", "L", "M", "N", "O",
-                   "P", "Q", "R", "S", "T",
-                   "U", "V", "W", "X", "Y",
-                   "Z", "#"]
+let alphabetArr = ["A", "Ă", "Â", "B", "C",
+                   "D", "Đ", "E", "Ê", "F",
+                   "G", "H", "I", "J", "K",
+                   "L", "M", "N", "O", "Ô",
+                   "Ơ", "P", "Q", "R", "S",
+                   "T", "U", "Ư", "V", "W",
+                   "X", "Y", "Z", "#"]
 
 
 let prefixCarrierNumber = ["090", "093", "0122", "0126", "0121", "0128", "0120", "091", "094", "0123", "0125", "0127", "096", "097", "098", "0162", "0163", "0164", "0165", "0166", "0167", "0168", "0169", "095", "092", "0186", "0188", "092", "0186", "0188", "0199"]
@@ -37,5 +38,7 @@ let prefixCarrierName : [String: String] =
 		"092" : "Vietnamobile", "0186" : "Vietnamobile",
 		"0188" : "Vietnamobile", "0199" : "Beeline",
 ]
+
+
 
 

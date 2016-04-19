@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "facebook-cover-photo12.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icon friend3.png",
       "scale" : "2x"
     },
     {

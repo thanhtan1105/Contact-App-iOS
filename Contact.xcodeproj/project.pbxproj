@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A60104FF1CBF7BC900331B49 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60104FE1CBF7BC900331B49 /* UIColorExtension.swift */; };
+		A607C9741CC15B3A00F59785 /* DetailContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A607C9731CC15B3A00F59785 /* DetailContactViewController.swift */; };
+		A607C9761CC16DB900F59785 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A607C9751CC16DB900F59785 /* ContactDetailView.swift */; };
+		A607C9781CC16DD300F59785 /* ContactDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A607C9771CC16DD300F59785 /* ContactDetailView.xib */; };
+		A63931DE1CC256A80032319B /* ProfileDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63931DD1CC256A80032319B /* ProfileDetailTableViewCell.swift */; };
+		A63931E11CC27FC40032319B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63931E01CC27FC40032319B /* UIViewExtension.swift */; };
+		A63931E31CC3D0C90032319B /* EmailContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63931E21CC3D0C90032319B /* EmailContactDetailView.swift */; };
+		A63931E51CC3D0DE0032319B /* EmailContactDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A63931E41CC3D0DE0032319B /* EmailContactDetailView.xib */; };
 		A64C013B1CBBEC2700842DC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64C013A1CBBEC2700842DC0 /* AppDelegate.swift */; };
 		A64C01401CBBEC2700842DC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A64C013E1CBBEC2700842DC0 /* Main.storyboard */; };
 		A64C01421CBBEC2700842DC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A64C01411CBBEC2700842DC0 /* Assets.xcassets */; };
@@ -42,6 +50,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A60104FE1CBF7BC900331B49 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		A607C9731CC15B3A00F59785 /* DetailContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailContactViewController.swift; path = Controller/DetailContactViewController.swift; sourceTree = "<group>"; };
+		A607C9751CC16DB900F59785 /* ContactDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactDetailView.swift; path = View/ContactDetailView.swift; sourceTree = "<group>"; };
+		A607C9771CC16DD300F59785 /* ContactDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactDetailView.xib; path = View/ContactDetailView.xib; sourceTree = "<group>"; };
+		A63931DD1CC256A80032319B /* ProfileDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileDetailTableViewCell.swift; path = View/ProfileDetailTableViewCell.swift; sourceTree = "<group>"; };
+		A63931E01CC27FC40032319B /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = Utility/UIViewExtension.swift; sourceTree = "<group>"; };
+		A63931E21CC3D0C90032319B /* EmailContactDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailContactDetailView.swift; path = View/EmailContactDetailView.swift; sourceTree = "<group>"; };
+		A63931E41CC3D0DE0032319B /* EmailContactDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmailContactDetailView.xib; path = View/EmailContactDetailView.xib; sourceTree = "<group>"; };
 		A64C01371CBBEC2700842DC0 /* Contact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A64C013A1CBBEC2700842DC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A64C013F1CBBEC2700842DC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +107,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A60104FD1CBF7BA800331B49 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A60104FE1CBF7BC900331B49 /* UIColorExtension.swift */,
+				A63931E01CC27FC40032319B /* UIViewExtension.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		A63931DC1CC245E20032319B /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				A64C016F1CBBF31D00842DC0 /* ContactTableViewCell.swift */,
+				A64C01701CBBF31D00842DC0 /* ContactTableViewCell.xib */,
+				A607C9751CC16DB900F59785 /* ContactDetailView.swift */,
+				A607C9771CC16DD300F59785 /* ContactDetailView.xib */,
+				A63931E21CC3D0C90032319B /* EmailContactDetailView.swift */,
+				A63931E41CC3D0DE0032319B /* EmailContactDetailView.xib */,
+				A64C017F1CBEAC5D00842DC0 /* FastCallingTableViewCell.swift */,
+				A63931DD1CC256A80032319B /* ProfileDetailTableViewCell.swift */,
+			);
+			name = Contact;
+			sourceTree = "<group>";
+		};
 		A64C012E1CBBEC2700842DC0 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +160,7 @@
 				A64C01691CBBEC4100842DC0 /* Controller */,
 				A64C01781CBCD07900842DC0 /* Helper */,
 				A64C01681CBBEC3700842DC0 /* AppDelegate */,
+				A60104FD1CBF7BA800331B49 /* Utility */,
 				A64C016A1CBBEC4B00842DC0 /* StoryBoard */,
 				A64C016B1CBBEC5C00842DC0 /* Support */,
 				A64C01411CBBEC2700842DC0 /* Assets.xcassets */,
@@ -182,9 +223,7 @@
 		A64C016E1CBBF28000842DC0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A64C016F1CBBF31D00842DC0 /* ContactTableViewCell.swift */,
-				A64C01701CBBF31D00842DC0 /* ContactTableViewCell.xib */,
-				A64C017F1CBEAC5D00842DC0 /* FastCallingTableViewCell.swift */,
+				A63931DC1CC245E20032319B /* Contact */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -218,6 +257,7 @@
 			children = (
 				A64C016C1CBBF12500842DC0 /* ContactsViewController.swift */,
 				A64C01821CBEAC8F00842DC0 /* FastCallingViewController.swift */,
+				A607C9731CC15B3A00F59785 /* DetailContactViewController.swift */,
 			);
 			name = Contact;
 			sourceTree = "<group>";
@@ -327,8 +367,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A64C01721CBBF31D00842DC0 /* ContactTableViewCell.xib in Resources */,
+				A63931E51CC3D0DE0032319B /* EmailContactDetailView.xib in Resources */,
 				A64C01451CBBEC2700842DC0 /* LaunchScreen.storyboard in Resources */,
 				A64C01421CBBEC2700842DC0 /* Assets.xcassets in Resources */,
+				A607C9781CC16DD300F59785 /* ContactDetailView.xib in Resources */,
 				A64C01401CBBEC2700842DC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,12 +397,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A64C01801CBEAC5D00842DC0 /* FastCallingTableViewCell.swift in Sources */,
+				A63931E31CC3D0C90032319B /* EmailContactDetailView.swift in Sources */,
 				A64C01831CBEAC8F00842DC0 /* FastCallingViewController.swift in Sources */,
 				A64C01711CBBF31D00842DC0 /* ContactTableViewCell.swift in Sources */,
 				A64C013B1CBBEC2700842DC0 /* AppDelegate.swift in Sources */,
+				A63931DE1CC256A80032319B /* ProfileDetailTableViewCell.swift in Sources */,
 				A64C017A1CBCD27F00842DC0 /* ContactHelper.swift in Sources */,
+				A60104FF1CBF7BC900331B49 /* UIColorExtension.swift in Sources */,
 				A64C01741CBBFA6A00842DC0 /* Define.swift in Sources */,
+				A607C9741CC15B3A00F59785 /* DetailContactViewController.swift in Sources */,
+				A63931E11CC27FC40032319B /* UIViewExtension.swift in Sources */,
 				A64C01771CBCAA6100842DC0 /* ContactModel.swift in Sources */,
+				A607C9761CC16DB900F59785 /* ContactDetailView.swift in Sources */,
 				A64C016D1CBBF12500842DC0 /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,7 +556,7 @@
 				INFOPLIST_FILE = Contact/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.supercoolapps.Contact;
+				PRODUCT_BUNDLE_IDENTIFIER = com.supercoolapps.phonenumbernetworking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -521,7 +569,7 @@
 				INFOPLIST_FILE = Contact/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.supercoolapps.Contact;
+				PRODUCT_BUNDLE_IDENTIFIER = com.supercoolapps.phonenumbernetworking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
