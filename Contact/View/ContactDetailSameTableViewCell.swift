@@ -17,7 +17,7 @@ protocol ContactDetailNeededFunction {
 	func layout()
 }
 
-class ContactDetailSameTableViewCell: UITableViewCell, ContactDetailNeededFunction {
+class ContactDetailSameTableViewCell: UITableViewCell, ContactDetailNeededFunction, ContactDetailCellProtocol {
 
 	// MARK: Layout variable
 	// ON SAME VIEW
@@ -82,10 +82,5 @@ extension ContactDetailSameTableViewCell: MFMessageComposeViewControllerDelegate
 	@objc internal func messageComposeViewController(controller: MFMessageComposeViewController,
 	                                  didFinishWithResult result: MessageComposeResult) {
 		controller.dismissViewControllerAnimated(true, completion: nil)
-	}
-
-	private func callWithNumber(number: String) {
-		let callNumber = number.stringByReplacingOccurrencesOfString(" ", withString: "")
-		ContactHelper.sharedInstance.callWithNumber(callNumber)
 	}
 }

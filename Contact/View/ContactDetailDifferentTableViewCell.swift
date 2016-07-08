@@ -13,7 +13,18 @@ protocol ContactDetailDifferentTableViewCellDelegate: class {
 
 }
 
-class ContactDetailDifferentTableViewCell: UITableViewCell, ContactDetailNeededFunction {
+protocol ContactDetailCellProtocol {
+  func callWithNumber(number: String)
+}
+
+extension ContactDetailCellProtocol {
+  func callWithNumber(number: String) {
+    let callNumber = number.stringByReplacingOccurrencesOfString(" ", withString: "")
+    ContactHelper.sharedInstance.callWithNumber(callNumber)
+  }
+}
+
+class ContactDetailDifferentTableViewCell: UITableViewCell, ContactDetailNeededFunction, ContactDetailCellProtocol {
 
 	@IBOutlet weak var carrierName: UILabel!
 	@IBOutlet weak var phoneNumber: UILabel!
@@ -43,7 +54,7 @@ class ContactDetailDifferentTableViewCell: UITableViewCell, ContactDetailNeededF
 
 	// Mark: - IBAction
 	@IBAction func onCallNowTapped(sender: UIButton) {
-		callWithNumber(contactDetailModel.phoneNumber)
+		callWithNumber(contactDetailModel.phoneNumber)    
 	}
 
 	@IBAction func onMessageTapped(sender: UIButton) {
@@ -72,8 +83,4 @@ extension ContactDetailDifferentTableViewCell: MFMessageComposeViewControllerDel
 		controller.dismissViewControllerAnimated(true, completion: nil)
 	}
 
-	private func callWithNumber(number: String) {
-		let callNumber = number.stringByReplacingOccurrencesOfString(" ", withString: "")
-		ContactHelper.sharedInstance.callWithNumber(callNumber)
-	}
 }
