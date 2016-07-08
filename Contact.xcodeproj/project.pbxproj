@@ -45,6 +45,8 @@
 		A64C017C1CBD4FA800842DC0 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64C017B1CBD4FA800842DC0 /* CoreTelephony.framework */; };
 		A64C01801CBEAC5D00842DC0 /* FastCallingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64C017F1CBEAC5D00842DC0 /* FastCallingTableViewCell.swift */; };
 		A64C01831CBEAC8F00842DC0 /* FastCallingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64C01821CBEAC8F00842DC0 /* FastCallingViewController.swift */; };
+		A671E97C1D303C3100B80435 /* NativeAdsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A671E97A1D303C3100B80435 /* NativeAdsTableViewCell.swift */; };
+		A671E97D1D303C3100B80435 /* NativeAdsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A671E97B1D303C3100B80435 /* NativeAdsTableViewCell.xib */; };
 		A67F8C3E1D094AB700011198 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67F8C3D1D094AB700011198 /* SettingViewController.swift */; };
 		A6B112DD1CFEC75300BD0062 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B112DC1CFEC75300BD0062 /* MyTabBarController.swift */; };
 		A6EEEA701D1264770068D665 /* NecessaryNumberChoiceCity.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EEEA6F1D1264770068D665 /* NecessaryNumberChoiceCity.xib */; };
@@ -124,6 +126,8 @@
 		A64C017B1CBD4FA800842DC0 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		A64C017F1CBEAC5D00842DC0 /* FastCallingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FastCallingTableViewCell.swift; path = View/FastCallingTableViewCell.swift; sourceTree = "<group>"; };
 		A64C01821CBEAC8F00842DC0 /* FastCallingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FastCallingViewController.swift; path = Controller/FastCallingViewController.swift; sourceTree = "<group>"; };
+		A671E97A1D303C3100B80435 /* NativeAdsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NativeAdsTableViewCell.swift; path = View/NativeAdsTableViewCell.swift; sourceTree = "<group>"; };
+		A671E97B1D303C3100B80435 /* NativeAdsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NativeAdsTableViewCell.xib; path = View/NativeAdsTableViewCell.xib; sourceTree = "<group>"; };
 		A67F8C3D1D094AB700011198 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = Controller/SettingViewController.swift; sourceTree = "<group>"; };
 		A6B112DC1CFEC75300BD0062 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTabBarController.swift; path = Controller/MyTabBarController.swift; sourceTree = "<group>"; };
 		A6EEEA6F1D1264770068D665 /* NecessaryNumberChoiceCity.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NecessaryNumberChoiceCity.xib; path = View/NecessaryNumberChoiceCity.xib; sourceTree = "<group>"; };
@@ -390,6 +394,8 @@
 				A64C016F1CBBF31D00842DC0 /* ContactTableViewCell.swift */,
 				A64C01701CBBF31D00842DC0 /* ContactTableViewCell.xib */,
 				A64C017F1CBEAC5D00842DC0 /* FastCallingTableViewCell.swift */,
+				A671E97A1D303C3100B80435 /* NativeAdsTableViewCell.swift */,
+				A671E97B1D303C3100B80435 /* NativeAdsTableViewCell.xib */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -538,6 +544,7 @@
 				A607DCB41D004ACD004DFE88 /* ProfileDetailHeaderView.xib in Resources */,
 				A607C9781CC16DD300F59785 /* SameCarrierTableViewCell.xib in Resources */,
 				A64C01401CBBEC2700842DC0 /* Main.storyboard in Resources */,
+				A671E97D1D303C3100B80435 /* NativeAdsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,6 +708,7 @@
 				A63931DE1CC256A80032319B /* ProfileDetailTableViewCell.swift in Sources */,
 				A6323C6D1D0576310086D821 /* ContactDetailDifferentTableViewCell.swift in Sources */,
 				A64C017A1CBCD27F00842DC0 /* ContactHelper.swift in Sources */,
+				A671E97C1D303C3100B80435 /* NativeAdsTableViewCell.swift in Sources */,
 				A60104FF1CBF7BC900331B49 /* UIColorExtension.swift in Sources */,
 				A6323C681D0562CC0086D821 /* KeypadViewController.swift in Sources */,
 				A64117F91D10D3EF00C5D9DD /* NecessaryNumberCell.swift in Sources */,
