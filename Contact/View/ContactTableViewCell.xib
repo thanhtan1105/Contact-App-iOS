@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -12,17 +12,17 @@
             <rect key="frame" x="0.0" y="0.0" width="462" height="110"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="462" height="110"/>
+                <rect key="frame" x="0.0" y="0.0" width="462" height="109"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ivf-ir-SPc" userLabel="Avatar">
-                        <rect key="frame" x="20" y="10" width="90" height="90"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ivf-ir-SPc" userLabel="Avatar">
+                        <rect key="frame" x="15" y="5" width="100" height="100"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Ivf-ir-SPc" secondAttribute="height" multiplier="1:1" id="7Ad-lP-Pwx"/>
                         </constraints>
                     </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gi4-GM-F8g" userLabel="ViewJob">
-                        <rect key="frame" x="118" y="55" width="249" height="47"/>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gi4-GM-F8g" userLabel="ViewJob">
+                        <rect key="frame" x="123" y="55" width="235" height="47"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Student" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gf-rh-sqO">
                                 <rect key="frame" x="0.0" y="0.0" width="255" height="47"/>
@@ -39,8 +39,8 @@
                             <constraint firstItem="2Gf-rh-sqO" firstAttribute="top" secondItem="gi4-GM-F8g" secondAttribute="top" id="Zeq-rA-fTA"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zi3-NU-Lcl" userLabel="ViewName">
-                        <rect key="frame" x="118" y="8" width="249" height="18"/>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zi3-NU-Lcl" userLabel="ViewName">
+                        <rect key="frame" x="123" y="8" width="235" height="18"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Le Thanh Tan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeV-84-CgJ" userLabel="Name">
                                 <rect key="frame" x="0.0" y="0.0" width="255" height="21"/>
@@ -57,13 +57,13 @@
                             <constraint firstItem="UeV-84-CgJ" firstAttribute="leading" secondItem="Zi3-NU-Lcl" secondAttribute="leading" id="xCP-47-uTH"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfx-NI-6yd">
-                        <rect key="frame" x="372" y="15" width="80" height="80"/>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfx-NI-6yd">
+                        <rect key="frame" x="363" y="10" width="89" height="90"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="jfx-NI-6yd" secondAttribute="height" multiplier="1:1" id="FDD-PV-Eoi"/>
                         </constraints>
-                        <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                        <state key="normal" image="callon"/>
+                        <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                        <state key="normal" image="callFast"/>
                         <connections>
                             <action selector="onCallTouchUpInside:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jj8-0C-ACq"/>
                         </connections>
@@ -72,16 +72,16 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="gi4-GM-F8g" secondAttribute="bottom" constant="8" id="2PP-wD-NWB"/>
                     <constraint firstAttribute="trailing" secondItem="gi4-GM-F8g" secondAttribute="trailing" constant="60" id="8is-HD-lr1"/>
-                    <constraint firstItem="Ivf-ir-SPc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="CQq-XJ-BBX"/>
+                    <constraint firstItem="Ivf-ir-SPc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="CQq-XJ-BBX"/>
                     <constraint firstAttribute="trailing" secondItem="Zi3-NU-Lcl" secondAttribute="trailing" constant="60" id="Cau-TF-Otp"/>
                     <constraint firstItem="gi4-GM-F8g" firstAttribute="leading" secondItem="Zi3-NU-Lcl" secondAttribute="leading" id="E0F-VI-rtO"/>
                     <constraint firstItem="jfx-NI-6yd" firstAttribute="bottom" secondItem="Ivf-ir-SPc" secondAttribute="bottom" constant="-5" id="IWJ-9i-GrS"/>
                     <constraint firstItem="gi4-GM-F8g" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.5" constant="-8" id="Jfj-wq-l2Z"/>
                     <constraint firstItem="jfx-NI-6yd" firstAttribute="leading" secondItem="Zi3-NU-Lcl" secondAttribute="trailing" constant="5" id="R9T-wv-YzA"/>
-                    <constraint firstAttribute="bottom" secondItem="Ivf-ir-SPc" secondAttribute="bottom" constant="10" id="UHu-9n-6OR"/>
+                    <constraint firstAttribute="bottom" secondItem="Ivf-ir-SPc" secondAttribute="bottom" constant="5" id="UHu-9n-6OR"/>
                     <constraint firstItem="jfx-NI-6yd" firstAttribute="leading" secondItem="gi4-GM-F8g" secondAttribute="trailing" constant="5" id="WIi-mY-5pe"/>
                     <constraint firstItem="jfx-NI-6yd" firstAttribute="top" secondItem="Ivf-ir-SPc" secondAttribute="top" constant="5" id="oYo-E7-IcL"/>
-                    <constraint firstItem="Ivf-ir-SPc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="uhO-Ua-5Gs"/>
+                    <constraint firstItem="Ivf-ir-SPc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="uhO-Ua-5Gs"/>
                     <constraint firstItem="Zi3-NU-Lcl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="xWe-Rb-sv2"/>
                     <constraint firstAttribute="trailing" secondItem="jfx-NI-6yd" secondAttribute="trailing" constant="10" id="yFS-4t-8zR"/>
                     <constraint firstItem="Zi3-NU-Lcl" firstAttribute="leading" secondItem="Ivf-ir-SPc" secondAttribute="trailing" constant="7.5" id="zcC-OF-5ZH"/>
@@ -105,6 +105,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="callon" width="240" height="180"/>
+        <image name="callFast" width="60" height="60"/>
     </resources>
 </document>

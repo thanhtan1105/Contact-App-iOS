@@ -24,7 +24,13 @@ class FastCallingTableViewCell: UITableViewCell {
 	}
 	
 	func configure(phoneNumber: String, isSameCarrier: Bool) {
-		numberLabel.text = phoneNumber
+		if isSameCarrier {
+			let attrs = [NSFontAttributeName : UIFont.boldSystemFontOfSize(17)]
+			let boldString = NSMutableAttributedString(string:phoneNumber, attributes:attrs)
+			numberLabel.attributedText = boldString
+		} else {
+			numberLabel.text = phoneNumber
+		}
 		recommendImage.hidden = !isSameCarrier
 	}
 

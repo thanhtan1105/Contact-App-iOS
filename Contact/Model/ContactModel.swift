@@ -17,7 +17,30 @@ enum CarrierName {
 	case Vietnamobile
 	case Beeline
 	case Unidentified
+	
+	var description: String {
+		get {
+			switch self {
+			case .Mobifone:
+				return "Mobifone"
+			case .Viettel:
+				return "Viettel"
+			case .Vinaphone:
+				return "Vinaphone"
+			case .Sfone:
+				return "Sfone"
+			case .Vietnamobile:
+				return "Vietnamobile"
+			case .Beeline:
+				return "Beeline"
+			default:
+				return "iOS"
+			}
+		}
+	}
 }
+
+
 
 protocol ContactProtocol {
 	var givenName: String? { get set }

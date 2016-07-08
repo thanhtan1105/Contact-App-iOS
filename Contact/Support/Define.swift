@@ -3,13 +3,11 @@
 //  Contact
 //
 //  Created by Le Thanh Tan on 4/11/16.
-//  Copyright © 2016 Le Thanh Tan. All rights reserved.
+//  Copyright © 216 Le Thanh Tan. All rights reserved.
 //
 
 import Foundation
 import UIKit
-
-let deviceName = UIDevice.currentDevice().name
 
 let alphabetArr = ["A", "Ă", "Â", "B", "C",
                    "D", "Đ", "E", "Ê", "F",
@@ -20,25 +18,21 @@ let alphabetArr = ["A", "Ă", "Â", "B", "C",
                    "X", "Y", "Z", "#"]
 
 
-let prefixCarrierNumber = ["090", "093", "0122", "0126", "0121", "0128", "0120", "091", "094", "0123", "0125", "0127", "096", "097", "098", "0162", "0163", "0164", "0165", "0166", "0167", "0168", "0169", "095", "092", "0186", "0188", "092", "0186", "0188", "0199"]
-let prefixCarrierName : [String: String] =
+let prefixCarrierNumber = ["90", "93", "122", "126", "121", "128", "12", "91", "94", "123", "125", "127", "96", "97", "98", "162", "163", "164", "165", "166", "167", "168", "169", "95", "92", "186", "188", "92", "186", "188", "199"]
+let prefixCarrierName: [String: String] =
 	[
-		"090" : "Mobifone", "093" : "Mobifone",
-		"0122" : "Mobifone", "0126" : "Mobifone",
-		"0121" : "Mobifone", "0128" : "Mobifone",
-		"0120" : "Mobifone", "091" : "Vinaphone",
-		"094" : "Vinaphone", "0123" : "Vinaphone",
-		"0125" : "Vinaphone", "0127" : "Vinaphone",
-		"096" : "Viettel", "097" : "Viettel",
-		"098" : "Viettel", "0162" : "Viettel",
-		"0163" : "Viettel", "0164" : "Viettel",
-		"0165" : "Viettel", "0166" : "Viettel",
-		"0167" : "Viettel", "0168" : "Viettel",
-		"0169" : "Viettel", "095" : "Sfone",
-		"092" : "Vietnamobile", "0186" : "Vietnamobile",
-		"0188" : "Vietnamobile", "0199" : "Beeline",
+		"90" : "Mobifone", "93" : "Mobifone",
+		"122" : "Mobifone", "126" : "Mobifone",
+		"121" : "Mobifone", "128" : "Mobifone",
+		"12" : "Mobifone", "91" : "Vinaphone",
+		"94" : "Vinaphone", "123" : "Vinaphone",
+		"125" : "Vinaphone", "127" : "Vinaphone",
+		"96" : "Viettel", "97" : "Viettel",
+		"98" : "Viettel", "162" : "Viettel",
+		"163" : "Viettel", "164" : "Viettel",
+		"165" : "Viettel", "166" : "Viettel",
+		"167" : "Viettel", "168" : "Viettel",
+		"169" : "Viettel", "95" : "Sfone",
+		"92" : "Vietnamobile", "186" : "Vietnamobile",
+		"188" : "Vietnamobile", "199" : "Beeline",
 ]
-
-
-
-

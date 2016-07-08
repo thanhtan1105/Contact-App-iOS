@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NecessaryNumberChoiceCity" customModule="Contact" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="534" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76G-yi-gWp">
+                    <rect key="frame" x="0.0" y="0.0" width="534" height="40"/>
+                    <state key="normal" title="Hà Nội"/>
+                    <connections>
+                        <action selector="onCityTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="WBv-Hq-Qvy"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3o-is-BTo">
+                    <rect key="frame" x="0.0" y="35" width="534" height="36"/>
+                    <state key="normal" title="Đà Nẵng"/>
+                    <connections>
+                        <action selector="onCityTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ra8-ZD-zJB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWR-v9-ljx">
+                    <rect key="frame" x="0.0" y="79" width="534" height="41"/>
+                    <state key="normal" title="Hồ Chí Minh"/>
+                    <connections>
+                        <action selector="onCityTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="sTt-r9-sid"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tgg-HZ-X6J" userLabel="Line1">
+                    <rect key="frame" x="0.0" y="34" width="534" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="GL4-kJ-QCW"/>
+                        <constraint firstAttribute="height" constant="128" id="Wuk-2R-jyJ"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Wuk-2R-jyJ"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="shx-tx-al4" userLabel="Line2">
+                    <rect key="frame" x="0.0" y="70" width="534" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="5Ln-e3-Fv1"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="5Ln-e3-Fv1"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="niR-Sc-SRy" userLabel="Line3">
+                    <rect key="frame" x="0.0" y="119" width="534" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="2Vj-5V-SVO"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="2Vj-5V-SVO"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="x3o-is-BTo" firstAttribute="top" secondItem="76G-yi-gWp" secondAttribute="bottom" id="0LX-Lu-peG"/>
+                <constraint firstItem="niR-Sc-SRy" firstAttribute="height" secondItem="shx-tx-al4" secondAttribute="height" id="2Gh-CM-pat"/>
+                <constraint firstItem="nWR-v9-ljx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="92y-Hv-rf1"/>
+                <constraint firstItem="niR-Sc-SRy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Edz-IT-JmE"/>
+                <constraint firstItem="nWR-v9-ljx" firstAttribute="top" secondItem="x3o-is-BTo" secondAttribute="bottom" id="F4T-27-A08"/>
+                <constraint firstItem="nWR-v9-ljx" firstAttribute="width" secondItem="x3o-is-BTo" secondAttribute="width" id="FTt-tW-DUT"/>
+                <constraint firstItem="niR-Sc-SRy" firstAttribute="width" secondItem="shx-tx-al4" secondAttribute="width" id="IQs-2i-Baq"/>
+                <constraint firstAttribute="bottom" secondItem="nWR-v9-ljx" secondAttribute="bottom" id="KPd-dp-YNB"/>
+                <constraint firstItem="x3o-is-BTo" firstAttribute="height" secondItem="76G-yi-gWp" secondAttribute="height" id="T3E-QH-TlC"/>
+                <constraint firstItem="x3o-is-BTo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TTg-dU-apy"/>
+                <constraint firstItem="76G-yi-gWp" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.33" id="Zp4-2D-shI"/>
+                <constraint firstItem="76G-yi-gWp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="a0o-JK-aCE"/>
+                <constraint firstItem="shx-tx-al4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dtZ-fg-EQf"/>
+                <constraint firstItem="shx-tx-al4" firstAttribute="height" secondItem="tgg-HZ-X6J" secondAttribute="height" id="ggh-cZ-5Ud"/>
+                <constraint firstItem="niR-Sc-SRy" firstAttribute="bottom" secondItem="nWR-v9-ljx" secondAttribute="bottom" id="jQh-mz-6pD"/>
+                <constraint firstItem="tgg-HZ-X6J" firstAttribute="leading" secondItem="76G-yi-gWp" secondAttribute="leading" id="rrM-xa-aBz"/>
+                <constraint firstItem="76G-yi-gWp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="smF-KZ-hSP"/>
+                <constraint firstItem="tgg-HZ-X6J" firstAttribute="bottom" secondItem="76G-yi-gWp" secondAttribute="bottom" id="snX-xk-R9b"/>
+                <constraint firstItem="76G-yi-gWp" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="ur1-yu-8gb"/>
+                <constraint firstItem="shx-tx-al4" firstAttribute="width" secondItem="tgg-HZ-X6J" secondAttribute="width" id="vZZ-AM-5bv"/>
+                <constraint firstItem="shx-tx-al4" firstAttribute="bottom" secondItem="x3o-is-BTo" secondAttribute="bottom" id="x6A-o5-7JT"/>
+                <constraint firstItem="tgg-HZ-X6J" firstAttribute="width" secondItem="76G-yi-gWp" secondAttribute="width" id="xzg-t7-xdl"/>
+                <constraint firstItem="x3o-is-BTo" firstAttribute="width" secondItem="76G-yi-gWp" secondAttribute="width" id="yIm-w7-vSn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="danangButton" destination="x3o-is-BTo" id="p4h-UF-kt8"/>
+                <outlet property="hanoiButton" destination="76G-yi-gWp" id="tcr-KT-SaO"/>
+                <outlet property="hochiminhButton" destination="nWR-v9-ljx" id="v1C-qR-XM9"/>
+            </connections>
+            <point key="canvasLocation" x="335" y="696"/>
+        </view>
+    </objects>
+</document>

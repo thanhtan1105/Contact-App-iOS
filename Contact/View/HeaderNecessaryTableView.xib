@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderNecessaryTableView" customModule="Contact" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="416" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="necessaryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lOw-Kx-Zl2" userLabel="AvatarImage">
+                    <rect key="frame" x="8" y="15" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="lOw-Kx-Zl2" secondAttribute="height" multiplier="1:1" id="d9D-Wa-r4m"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DR6-LB-qjp">
+                    <rect key="frame" x="53" y="8" width="44" height="47"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropDown" translatesAutoresizingMaskIntoConstraints="NO" id="WMz-CK-Vtg">
+                    <rect key="frame" x="381" y="20" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="WMz-CK-Vtg" secondAttribute="height" id="VE5-c7-P6y"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="DR6-LB-qjp" firstAttribute="bottom" secondItem="lOw-Kx-Zl2" secondAttribute="bottom" constant="10" id="16N-Ar-Eb8"/>
+                <constraint firstItem="lOw-Kx-Zl2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="27H-zn-Ezo"/>
+                <constraint firstItem="DR6-LB-qjp" firstAttribute="leading" secondItem="lOw-Kx-Zl2" secondAttribute="trailing" constant="15" id="8kt-UD-vus"/>
+                <constraint firstItem="lOw-Kx-Zl2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="9q0-tz-pEv"/>
+                <constraint firstItem="DR6-LB-qjp" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="J7i-py-dJv"/>
+                <constraint firstAttribute="trailing" secondItem="WMz-CK-Vtg" secondAttribute="trailing" constant="15" id="MAJ-Cm-tUB"/>
+                <constraint firstItem="WMz-CK-Vtg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DR6-LB-qjp" secondAttribute="trailing" constant="10" id="OA0-dC-8H4"/>
+                <constraint firstItem="WMz-CK-Vtg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ZBo-tO-Gc7"/>
+                <constraint firstItem="DR6-LB-qjp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="gbk-h7-rkz"/>
+                <constraint firstItem="WMz-CK-Vtg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="ojW-rE-EZA"/>
+                <constraint firstItem="lOw-Kx-Zl2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="sep-t7-zSM"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="J7i-py-dJv"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="iconImage" destination="lOw-Kx-Zl2" id="vPc-Au-Ixu"/>
+                <outlet property="ncessaryIcon" destination="WMz-CK-Vtg" id="oeD-KH-5Li"/>
+                <outlet property="titleLabel" destination="DR6-LB-qjp" id="9Ss-iz-4wo"/>
+            </connections>
+            <point key="canvasLocation" x="270" y="418"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dropDown" width="32" height="32"/>
+        <image name="necessaryIcon" width="64" height="64"/>
+    </resources>
+</document>

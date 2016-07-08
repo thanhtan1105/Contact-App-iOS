@@ -16,18 +16,20 @@ class FastCallingViewController: UIViewController, UIViewControllerTransitioning
 	
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var cancelButton: UIButton!
-	
+	@IBOutlet weak var fastCallLabel: UILabel!
 	@IBOutlet weak var heightTableViewConstraint: NSLayoutConstraint!
-	weak var contactViewController: ContactsViewController!
-	var phoneNumberArr : [String] = []
-	var carrierNameArr: [CarrierName]?
-	var ownerCarrierName: CarrierName?
 	
+	weak var contactViewController: ContactsViewController!
+	var contactModel: ContactModel!
+	var ownerCarrierName: CarrierName!
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
 		let singleTap = UITapGestureRecognizer(target: self, action: #selector(handleSingleTap))
 		self.view.addGestureRecognizer(singleTap)
+		
+		// Fast calling
+		fastCallLabel.text = "Gọi nhanh cho " + "\(contactModel.givenName!) \(contactModel.familyName!)"
 	}
 	
 	func handleSingleTap() {
@@ -42,17 +44,17 @@ class FastCallingViewController: UIViewController, UIViewControllerTransitioning
 	}
 	
 	override func viewDidLayoutSubviews() {
-		if CGFloat(phoneNumberArr.count) * heightCell > maxHeightTableViewCell {
+		if CGFloat((contactModel?.phoneNumbers!.count)!) * heightCell > maxHeightTableViewCell {
 			heightTableViewConstraint.constant = maxHeightTableViewCell
 			tableView.scrollEnabled = true
 		} else {
-			heightTableViewConstraint.constant = CGFloat(phoneNumberArr.count) * heightCell
+			heightTableViewConstraint.constant = CGFloat(contactModel!.phoneNumbers!.count) * heightCell
 			tableView.scrollEnabled = false
 		}
 		self.tableView.layoutIfNeeded()
 	}
 	
-	@IBAction func onCancelTouchUpInside(sender: UIButton) {
+	@IBAction private func onCancelTouchUpInside(sender: UIButton) {
 		self.contactViewController.view.alpha = 1.0
 		self.contactViewController.view.backgroundColor = UIColor.whiteColor()
 		self.dismissViewControllerAnimated(true, completion: nil)
@@ -63,17 +65,6 @@ class FastCallingViewController: UIViewController, UIViewControllerTransitioning
 		modalPresentationStyle = .Custom
 		transitioningDelegate = self
 	}
-
-
-	/*
-	// MARK: - Navigation
-
-	// In a storyboard-based application, you will often want to do a little preparation before navigation
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-			// Get the new view controller using segue.destinationViewController.
-			// Pass the selected object to the new view controller.
-	}
-	*/
 }
 
 extension FastCallingViewController: UITableViewDataSource, UITableViewDelegate {
@@ -81,8 +72,8 @@ extension FastCallingViewController: UITableViewDataSource, UITableViewDelegate 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("fastCallingCell") as! FastCallingTableViewCell
 		
-		let isSameCarrier = carrierNameArr![indexPath.row] == ownerCarrierName ? true : false
-		cell.configure(phoneNumberArr[indexPath.row], isSameCarrier: isSameCarrier)
+		let isSameCarrier = contactModel?.carrierName![indexPath.row] == ownerCarrierName ? true : false
+		cell.configure(contactModel!.phoneNumbers![indexPath.row], isSameCarrier: isSameCarrier)
 		return cell
 	}
 	
@@ -91,7 +82,7 @@ extension FastCallingViewController: UITableViewDataSource, UITableViewDelegate 
 	}
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return phoneNumberArr.count
+		return contactModel!.phoneNumbers!.count
 	}
 	
 	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -100,10 +91,6 @@ extension FastCallingViewController: UITableViewDataSource, UITableViewDelegate 
 	
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 		tableView.deselectRowAtIndexPath(indexPath, animated: true)
-		if let url = NSURL(string: "tel://\(phoneNumberArr[indexPath.row])") {
-			UIApplication.sharedApplication().openURL(url)
-		}
-		
-		
+		ContactHelper.sharedInstance.callWithNumber(contactModel!.phoneNumbers![indexPath.row])
 	}
 }
