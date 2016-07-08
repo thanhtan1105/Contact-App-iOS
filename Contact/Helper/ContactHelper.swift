@@ -38,12 +38,26 @@ extension ContactHelperOptionalDelegate {
 
 
 class ContactHelper: NSObject {
+  
 	var contacts: [ContactModel] = []
 	var contactsDic: [String: [ContactModel]] = [:]
 	private var validContacts: [CNContact] = []
 	private let contactStore = CNContactStore()
 	weak var delegate: ContactHelperDelegate?
 
+  let keys = [
+    CNContactGivenNameKey,	// done
+    CNContactMiddleNameKey, // done
+    CNContactFamilyNameKey, // done
+    CNContactEmailAddressesKey, // done
+    CNContactPhoneNumbersKey, // done
+    CNContactImageDataKey, // done
+    CNContactThumbnailImageDataKey, // done
+    CNContactJobTitleKey, // done
+    CNContactBirthdayKey, // done
+    CNContactOrganizationNameKey // done
+  ]
+  
 	static var sharedInstance: ContactHelper = {
 		return ContactHelper()
 	}()
@@ -87,20 +101,7 @@ class ContactHelper: NSObject {
 		contactStore.requestAccessForEntityType(.Contacts) { (granted: Bool, error: NSError?) in
 			if (granted) {
 				do {
-					// Specify the key fields that you want to be fetched
-					let keysToFetch = [CNContactFormatter.descriptorForRequiredKeysForStyle(.FullName),
-															CNContactGivenNameKey,	// done
-															CNContactMiddleNameKey, // done
-															CNContactFamilyNameKey, // done
-															CNContactEmailAddressesKey, // done
-															CNContactPhoneNumbersKey, // done
-															CNContactImageDataKey, // done
-															CNContactThumbnailImageDataKey, // done
-															CNContactJobTitleKey, // done
-															CNContactBirthdayKey, // done
-															CNContactOrganizationNameKey // done
-					]
-					let fetchRequest = CNContactFetchRequest(keysToFetch: keysToFetch)
+					let fetchRequest = CNContactFetchRequest(keysToFetch: self.keys)
 					CNContact.localizedStringForKey(CNLabelPhoneNumberiPhone)
 					fetchRequest.mutableObjects = false
 					fetchRequest.unifyResults = true
@@ -187,18 +188,7 @@ class ContactHelper: NSObject {
 	- returns: List of CNContact
 	*/
 	func searchContactWithName(name: String) -> [CNContact] {
-		let keys = [
-			CNContactGivenNameKey,	// done
-			CNContactMiddleNameKey, // done
-			CNContactFamilyNameKey, // done
-			CNContactEmailAddressesKey, // done
-			CNContactPhoneNumbersKey, // done
-			CNContactImageDataKey, // done
-			CNContactThumbnailImageDataKey, // done
-			CNContactJobTitleKey, // done
-			CNContactBirthdayKey, // done
-			CNContactOrganizationNameKey // done
-		]
+
 		let keysToFetch = [CNContactFormatter.descriptorForRequiredKeysForStyle(.FullName), keys]
 
 		let fetchRequest = CNContactFetchRequest( keysToFetch: keysToFetch as! [CNKeyDescriptor])
@@ -343,7 +333,7 @@ extension ContactHelper {
 				case "Beeline":
 					carrierName = CarrierName.Beeline
 				default:
-					carrierName = CarrierName.Unidentified
+          break
 				}
 				return carrierName
 			}

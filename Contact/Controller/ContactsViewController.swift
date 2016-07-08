@@ -203,23 +203,11 @@ extension ContactsViewController: ContactTableViewCellDelegate {
 		
 		if contactModel.phoneNumbers?.count == 1 {
 			// real
-//			if let url = NSURL(string: "tel://\(listPhoneNumber.first!)") {
-//				UIApplication.sharedApplication().openURL(url)
-//				return
-//			}
+			if let url = NSURL(string: "tel://\(contactModel.phoneNumbers?.first)") {
+				UIApplication.sharedApplication().openURL(url)
+				return
+			}
 			
-			let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-			let fastCallingVC = mainStoryboard.instantiateViewControllerWithIdentifier("FastCallingViewController") as! FastCallingViewController
-			fastCallingVC.contactModel = contactModel
-			fastCallingVC.ownerCarrierName = carrierName
-
-			self.view.alpha = 0.6
-			self.view.backgroundColor = UIColor.blackColor()
-
-			self.navigationController?.presentViewController(fastCallingVC, animated: true, completion: {
-				fastCallingVC.contactViewController = self
-			})
-
 		} else {
 			let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
 			let fastCallingVC = mainStoryboard.instantiateViewControllerWithIdentifier("FastCallingViewController") as! FastCallingViewController
