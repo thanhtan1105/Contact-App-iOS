@@ -25,10 +25,14 @@
 		A6323C681D0562CC0086D821 /* KeypadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6323C671D0562CC0086D821 /* KeypadViewController.swift */; };
 		A6323C6D1D0576310086D821 /* ContactDetailDifferentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6323C6B1D0576310086D821 /* ContactDetailDifferentTableViewCell.swift */; };
 		A6323C6E1D0576310086D821 /* DifferentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6323C6C1D0576310086D821 /* DifferentTableViewCell.xib */; };
+		A633AED11D33A90200664880 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633AED01D33A90200664880 /* BaseViewController.swift */; };
+		A633AED31D33AB4100664880 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A633AED21D33AB4100664880 /* GoogleService-Info.plist */; };
 		A63931DE1CC256A80032319B /* ProfileDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63931DD1CC256A80032319B /* ProfileDetailTableViewCell.swift */; };
 		A63931E11CC27FC40032319B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63931E01CC27FC40032319B /* UIViewExtension.swift */; };
 		A63931E31CC3D0C90032319B /* EmailContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63931E21CC3D0C90032319B /* EmailContactDetailView.swift */; };
 		A63931E51CC3D0DE0032319B /* EmailContactDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A63931E41CC3D0DE0032319B /* EmailContactDetailView.xib */; };
+		A63CB3BE1D3385F80084FFC8 /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63CB3BD1D3385F80084FFC8 /* AboutTableViewCell.swift */; };
+		A63CB3C01D3386FA0084FFC8 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63CB3BF1D3386FA0084FFC8 /* AboutViewController.swift */; };
 		A64117F91D10D3EF00C5D9DD /* NecessaryNumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64117F81D10D3EF00C5D9DD /* NecessaryNumberCell.swift */; };
 		A64C013B1CBBEC2700842DC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64C013A1CBBEC2700842DC0 /* AppDelegate.swift */; };
 		A64C01401CBBEC2700842DC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A64C013E1CBBEC2700842DC0 /* Main.storyboard */; };
@@ -100,10 +104,15 @@
 		A6323C671D0562CC0086D821 /* KeypadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeypadViewController.swift; path = Controller/KeypadViewController.swift; sourceTree = "<group>"; };
 		A6323C6B1D0576310086D821 /* ContactDetailDifferentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactDetailDifferentTableViewCell.swift; path = View/ContactDetailDifferentTableViewCell.swift; sourceTree = "<group>"; };
 		A6323C6C1D0576310086D821 /* DifferentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DifferentTableViewCell.xib; path = View/DifferentTableViewCell.xib; sourceTree = "<group>"; };
+		A633AE8A1D339BA000664880 /* Contact-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contact-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		A633AED01D33A90200664880 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Controller/BaseViewController.swift; sourceTree = "<group>"; };
+		A633AED21D33AB4100664880 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A63931DD1CC256A80032319B /* ProfileDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileDetailTableViewCell.swift; path = View/ProfileDetailTableViewCell.swift; sourceTree = "<group>"; };
 		A63931E01CC27FC40032319B /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = Utility/UIViewExtension.swift; sourceTree = "<group>"; };
 		A63931E21CC3D0C90032319B /* EmailContactDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailContactDetailView.swift; path = View/EmailContactDetailView.swift; sourceTree = "<group>"; };
 		A63931E41CC3D0DE0032319B /* EmailContactDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmailContactDetailView.xib; path = View/EmailContactDetailView.xib; sourceTree = "<group>"; };
+		A63CB3BD1D3385F80084FFC8 /* AboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutTableViewCell.swift; path = View/AboutTableViewCell.swift; sourceTree = "<group>"; };
+		A63CB3BF1D3386FA0084FFC8 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewController.swift; path = Controller/AboutViewController.swift; sourceTree = "<group>"; };
 		A64117F81D10D3EF00C5D9DD /* NecessaryNumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NecessaryNumberCell.swift; path = View/NecessaryNumberCell.swift; sourceTree = "<group>"; };
 		A64C01371CBBEC2700842DC0 /* Contact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A64C013A1CBBEC2700842DC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +224,7 @@
 				A64117F81D10D3EF00C5D9DD /* NecessaryNumberCell.swift */,
 				A6EEEA6F1D1264770068D665 /* NecessaryNumberChoiceCity.xib */,
 				A6EEEA711D1265410068D665 /* NecessaryNumberChoiceCity.swift */,
+				A63CB3BD1D3385F80084FFC8 /* AboutTableViewCell.swift */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -228,6 +238,24 @@
 				A60A1B951D06B92300393341 /* Keypad */,
 			);
 			name = Contact;
+			sourceTree = "<group>";
+		};
+		A63CB3BB1D337E230084FFC8 /* Necessary */ = {
+			isa = PBXGroup;
+			children = (
+				A6F5F5381D0FE6A90081DE91 /* NecessaryCallViewController.swift */,
+			);
+			name = Necessary;
+			sourceTree = "<group>";
+		};
+		A63CB3BC1D337E2F0084FFC8 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A67F8C3D1D094AB700011198 /* SettingViewController.swift */,
+				A63CB3BB1D337E230084FFC8 /* Necessary */,
+				A63CB3BF1D3386FA0084FFC8 /* AboutViewController.swift */,
+			);
+			name = Setting;
 			sourceTree = "<group>";
 		};
 		A64C012E1CBBEC2700842DC0 = {
@@ -263,6 +291,7 @@
 				A64C01681CBBEC3700842DC0 /* AppDelegate */,
 				A60104FD1CBF7BA800331B49 /* Utility */,
 				A64C016A1CBBEC4B00842DC0 /* StoryBoard */,
+				A633AED21D33AB4100664880 /* GoogleService-Info.plist */,
 				A64C016B1CBBEC5C00842DC0 /* Support */,
 				A64C01411CBBEC2700842DC0 /* Assets.xcassets */,
 			);
@@ -316,6 +345,7 @@
 		A64C016B1CBBEC5C00842DC0 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				A633AE8A1D339BA000664880 /* Contact-Bridging-Header.h */,
 				A64C01461CBBEC2700842DC0 /* Info.plist */,
 				A64C01731CBBFA6A00842DC0 /* Define.swift */,
 				A6F5F53C1D0FFAF60081DE91 /* necessaryNumber.json */,
@@ -362,12 +392,12 @@
 		A64C01811CBEAC6F00842DC0 /* Contact */ = {
 			isa = PBXGroup;
 			children = (
+				A633AED01D33A90200664880 /* BaseViewController.swift */,
 				A64C016C1CBBF12500842DC0 /* ContactsViewController.swift */,
 				A64C01821CBEAC8F00842DC0 /* FastCallingViewController.swift */,
 				A607C9731CC15B3A00F59785 /* DetailContactViewController.swift */,
 				A6323C671D0562CC0086D821 /* KeypadViewController.swift */,
-				A67F8C3D1D094AB700011198 /* SettingViewController.swift */,
-				A6F5F5381D0FE6A90081DE91 /* NecessaryCallViewController.swift */,
+				A63CB3BC1D337E2F0084FFC8 /* Setting */,
 			);
 			name = Contact;
 			sourceTree = "<group>";
@@ -496,6 +526,12 @@
 				TargetAttributes = {
 					A64C01361CBBEC2700842DC0 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = GYEARP5PXS;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					A64C014A1CBBEC2700842DC0 = {
 						CreatedOnToolsVersion = 7.3;
@@ -537,6 +573,7 @@
 				A60A1B991D06BBF600393341 /* SearchContactTableViewCell.xib in Resources */,
 				A6323C6E1D0576310086D821 /* DifferentTableViewCell.xib in Resources */,
 				A63931E51CC3D0DE0032319B /* EmailContactDetailView.xib in Resources */,
+				A633AED31D33AB4100664880 /* GoogleService-Info.plist in Resources */,
 				A6F5F53D1D0FFAF60081DE91 /* necessaryNumber.json in Resources */,
 				A6F5F54B1D103B660081DE91 /* HeaderNecessaryTableView.xib in Resources */,
 				A64C01451CBBEC2700842DC0 /* LaunchScreen.storyboard in Resources */,
@@ -695,12 +732,15 @@
 				A64C01801CBEAC5D00842DC0 /* FastCallingTableViewCell.swift in Sources */,
 				A6323C661D0194FB0086D821 /* ContactDetailModel.swift in Sources */,
 				A63237641D0BE248001737B7 /* UIViewControllerExtension.swift in Sources */,
+				A63CB3C01D3386FA0084FFC8 /* AboutViewController.swift in Sources */,
 				A607DCB21D004589004DFE88 /* ProfileDetailHeaderTableView.swift in Sources */,
+				A633AED11D33A90200664880 /* BaseViewController.swift in Sources */,
 				A6F5F5421D0FFC3E0081DE91 /* NecessaryNumberCategory.swift in Sources */,
 				A6F5F5391D0FE6A90081DE91 /* NecessaryCallViewController.swift in Sources */,
 				A63931E31CC3D0C90032319B /* EmailContactDetailView.swift in Sources */,
 				A60A1B981D06BBF600393341 /* SearchContactTableViewCell.swift in Sources */,
 				A6F5F5491D103AE00081DE91 /* HeaderNecessaryTableView.swift in Sources */,
+				A63CB3BE1D3385F80084FFC8 /* AboutTableViewCell.swift in Sources */,
 				A64C01831CBEAC8F00842DC0 /* FastCallingViewController.swift in Sources */,
 				A6F5F5401D0FFB610081DE91 /* NecessaryNumberItem.swift in Sources */,
 				A64C01711CBBF31D00842DC0 /* ContactTableViewCell.swift in Sources */,
@@ -869,14 +909,18 @@
 			baseConfigurationReference = 291E3D23F100A4B72457170E /* Pods-Contact.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Contact/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superapp.goinoimangsieukhuyenmaiviettelvinaphonemobifone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Contact-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -886,14 +930,17 @@
 			baseConfigurationReference = 3DEE26E716A0E94C37009250 /* Pods-Contact.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Contact/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superapp.goinoimangsieukhuyenmaiviettelvinaphonemobifone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Contact-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

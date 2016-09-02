@@ -210,6 +210,17 @@ class ContactHelper: NSObject {
 		}
 		return contacts
 	}
+
+	/**
+	Calling with number
+
+	- parameter number: String
+	*/
+	func callWithNumber(number: String) {
+		if let url = NSURL(string: "tel://\(number)") {
+			UIApplication.sharedApplication().openURL(url)
+		}
+	}
 }
 
 extension ContactHelper: CNContactViewControllerDelegate {

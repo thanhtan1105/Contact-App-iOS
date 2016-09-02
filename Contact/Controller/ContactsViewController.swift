@@ -10,6 +10,7 @@ import UIKit
 import Contacts
 import ContactsUI
 import AddressBookUI
+import GoogleMobileAds
 
 class ContactsViewController: UIViewController {
 
@@ -20,6 +21,8 @@ class ContactsViewController: UIViewController {
 	@IBOutlet weak var profileView: UIView!
 	@IBOutlet weak var carrierNameLabel: UILabel!
 	@IBOutlet weak var searchView: UIView!
+  @IBOutlet weak var bannerAds: GADBannerView!
+  
 	
 	
 	var searchController = UISearchController(searchResultsController: nil)
@@ -61,8 +64,10 @@ class ContactsViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		tableView.tableHeaderView = profileView
+    tableView.registerNib(UINib(nibName: "ContactTableViewCell", bundle: nil), forCellReuseIdentifier: "contactCell")
+    tableView.registerNib(UINib(nibName: "NativeAdsTableViewCell", bundle: nil), forCellReuseIdentifier: "nativeAdsCell")
+    
 		ContactHelper.sharedInstance.delegate = self
-
 		isNeedImportContact = true
 		searchController = ({
 			// Setup the Search Controller
@@ -89,6 +94,7 @@ class ContactsViewController: UIViewController {
 		carrierName = ContactHelper.sharedInstance.getOwnerCarrierName()
 		carrierName = CarrierName.Mobifone // test dummy
 		profileImage = ContactHelper.sharedInstance.getOwnerProfileImage()
+    showBannerAds(bannerAds, myViewController: self) // ads
 	}
 }
 
@@ -103,15 +109,11 @@ extension ContactsViewController {
 extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
 	func tableView(tableView: UITableView,
 	               cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		var cell: ContactTableViewCell! =
+//    let cell: NativeAdsTableViewCell = tableView.dequeueReusableCellWithIdentifier("nativeAdsCell") as! NativeAdsTableViewCell
+//    cell.configureAds(self)
+    
+		let cell: ContactTableViewCell! =
 			tableView.dequeueReusableCellWithIdentifier("contactCell") as? ContactTableViewCell
-
-		if cell == nil {
-			cell = NSBundle.mainBundle().loadNibNamed("ContactTableViewCell",
-			                                          owner: self,
-			                                          options: nil)[0] as! ContactTableViewCell
-
-		}
 
 		// filter mode is on
 		if searchController.active && searchController.searchBar.text != "" {
@@ -199,7 +201,6 @@ extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
 extension ContactsViewController: ContactTableViewCellDelegate {
 	
 	func contactTableViewCell(contactTableViewCell: ContactTableViewCell, didTapCallAction contactModel: ContactModel) {
-
 		
 		if contactModel.phoneNumbers?.count == 1 {
 			// real
@@ -207,7 +208,6 @@ extension ContactsViewController: ContactTableViewCellDelegate {
 				UIApplication.sharedApplication().openURL(url)
 				return
 			}
-			
 		} else {
 			let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
 			let fastCallingVC = mainStoryboard.instantiateViewControllerWithIdentifier("FastCallingViewController") as! FastCallingViewController

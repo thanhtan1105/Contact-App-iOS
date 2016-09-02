@@ -26,9 +26,9 @@ class SettingNessaryCell: UITableViewCell {
 	}
 
 
-	func configCellWithIndexPath(indexPath: NSIndexPath, title: String, descriptions: String) {
+  func configCellWithIndexPath(indexPath: NSIndexPath, title: String, descriptions: String, imageName: String) {
 		titleLabel.text = title
 		descriptionLabel.text = descriptions
-		imageCell.image = UIImage(named: "necessaryIcon")
+		imageCell.image = UIImage(named: imageName)
 	}
 }

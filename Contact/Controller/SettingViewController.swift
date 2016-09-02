@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingViewController: UIViewController {
+class SettingViewController: BaseViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -16,7 +16,7 @@ class SettingViewController: UIViewController {
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
-	}
+	}    
 
 }
 
@@ -26,11 +26,20 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
 		case 0:
 			if indexPath.row == 0 {
 				let cell = tableView.dequeueReusableCellWithIdentifier("settingNessaryCell") as! SettingNessaryCell
-				cell.configCellWithIndexPath(indexPath, title: "Số điện thoại cần thiết", descriptions: "Tra cứu SĐT taxi, cứu hộ, tư vấn ....")
+				cell.configCellWithIndexPath(indexPath, title: "Số điện thoại cần thiết", descriptions: "Tra cứu SĐT taxi, cứu hộ, tư vấn ....", imageName: "necessaryIcon")
 				return cell
 			}
 
 			break
+      
+    case 1:
+      if indexPath.row == 0 {
+        let cell = tableView.dequeueReusableCellWithIdentifier("settingNessaryCell") as! SettingNessaryCell
+        cell.configCellWithIndexPath(indexPath, title: "Liên Hệ", descriptions: "Super Cool App Team", imageName: "ic_about")
+        return cell
+
+      }
+      break
 		default:
 			break
 		}
@@ -40,14 +49,43 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 		tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    if indexPath.section == 0 {
+      switch indexPath.row {
+      case 0:
+        let necessaryVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("NecessaryCallViewController") as! NecessaryCallViewController
+        self.navigationController?.pushViewController(necessaryVC, animated: true)
+        break
+      default:
+        break
+      }
+      
+    } else if indexPath.section == 1 {
+      switch indexPath.row {
+      case 0:
+        let necessaryVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AboutViewController") as! AboutViewController
+        self.navigationController?.pushViewController(necessaryVC, animated: true)
+        break
+      default:
+        break
+      }
+      
+    }
 	}
 
 	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-		return 1
+		return 2
 	}
 
 	func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-		return "Tiện ích"
+    switch section {
+    case 0:
+      return "Tiện ích"
+
+    case 1:
+      return "Về chúng tôi"
+    default:
+      return ""
+    }		
 	}
 
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class DetailContactViewController: UIViewController {
+class DetailContactViewController: BaseViewController {
 
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var buttonClose: UIButton!

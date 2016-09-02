@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GoogleMobileAds
 
 let alphabetArr = ["A", "Ă", "Â", "B", "C",
                    "D", "Đ", "E", "Ê", "F",
@@ -36,3 +37,13 @@ let prefixCarrierName: [String: String] =
 		"92" : "Vietnamobile", "186" : "Vietnamobile",
 		"188" : "Vietnamobile", "199" : "Beeline",
 ]
+
+// Google Ads
+let adUnitID = "ca-app-pub-8272403203330390/2256423065"
+func showBannerAds(bannerView: GADBannerView, myViewController: UIViewController) {
+  // ads
+  bannerView.adUnitID = adUnitID
+  bannerView.rootViewController = myViewController
+  bannerView.loadRequest(GADRequest())
+}
+

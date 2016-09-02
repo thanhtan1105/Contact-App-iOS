@@ -11,7 +11,7 @@ import Contacts
 import ContactsUI
 import AddressBookUI
 
-class KeypadViewController: UIViewController {
+class KeypadViewController: BaseViewController {
 
 	@IBOutlet weak var callButton: UIButton!
 	@IBOutlet weak var deleteButton: UIButton!

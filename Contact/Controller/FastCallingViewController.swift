@@ -9,7 +9,7 @@
 import UIKit
 
 
-class FastCallingViewController: UIViewController, UIViewControllerTransitioningDelegate {
+class FastCallingViewController: BaseViewController, UIViewControllerTransitioningDelegate {
 	// constant
 	let heightCell: CGFloat = 50.0
 	let maxHeightTableViewCell : CGFloat = 50.0 * 5

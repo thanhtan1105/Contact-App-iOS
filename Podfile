@@ -8,6 +8,8 @@ target 'Contact' do
   # Pods for Contact
   pod 'Firebase'
   pod 'Firebase/AdMob'
+  pod 'Google/Analytics'
+  pod 'OneSignal'
 
   target 'ContactTests' do
     inherit! :search_paths

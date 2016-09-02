@@ -15,7 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
+    _ = OneSignal(launchOptions: launchOptions, appId: "130f6ebe-826c-4d1c-bb05-0be845c5f23a", handleNotification: nil)
+    
+    OneSignal.defaultClient().enableInAppAlertNotification(true)
+    
 		return true
 	}
 
